@@ -37,10 +37,16 @@
                 </configuration>
             </plugin>
             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
+                
                 <groupId>org.apache.maven.plugins</groupId>
-        
-        <version>2.12</version>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.19.1</version>
+    <configuration>
+        <systemPropertyVariables>
+            <xmlOutputDir>${project.build.directory}/surefire</xmlOutputDir>
+        </systemPropertyVariables>
+    </configuration>
+                
                 <configuration>
                     <skip>true</skip>
                 </configuration>
